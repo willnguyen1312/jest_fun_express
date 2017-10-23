@@ -21,5 +21,8 @@
     "start": "nodemon --exec babel-node -- index",
     "lint": "eslint **/*.js",
     "test": "jest --watch"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }
