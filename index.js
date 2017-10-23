@@ -1,3 +1,9 @@
-const helloWorld = to => `Hello ${to}!`
+import app from './src/server'
 
-export default helloWorld
+const isProduction = process.env.NODE_ENV === 'production'
+const port = isProduction ? process.env.PORT : 3000
+
+app.listen(port, () => {
+  /* eslint-disable no-console */
+  console.log(`Server running on port ${port}`)
+})
